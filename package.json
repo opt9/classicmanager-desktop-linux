@@ -1,0 +1,21 @@
+{
+  "devDependencies": {
+    "dbus": "^1.0.0",
+    "electron-builder": "^13.9.0",
+    "electron-installer-debian": "^0.4.0",
+    "electron-packager": "^8.5.1",
+    "electron": "^1.6.11",
+    "mpris-service": "^1.1.1"
+  },
+  "scripts": {
+    "build": "electron-packager ./app/ classicmanager-desktop-linux --platform=linux --arch=x64 --overwrite",
+    "dist": "build",
+    "pepper": "rm -rf ./app/plugins && mkdir ./app/plugins && ./extract-linux-pepperflash.sh && mv /usr/lib/adobe-flashplugin/libpepflashplayer.so ./app/plugins/ && mv /usr/lib/adobe-flashplugin/manifest.json ./app/plugins/",
+    "start": "electron app/main.js",
+    "deb64": "electron-installer-debian --src dist/linux-unpacked/ --dest dist/installers/ --arch amd64"
+  },
+  "build": {
+    "app-bundle-id": "1",
+    "mac.category": "public.app-category.developer-tools"
+  }
+}

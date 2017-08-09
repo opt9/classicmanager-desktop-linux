@@ -1,0 +1,24 @@
+{
+  "name": "classicmanager-desktop-for-linux",
+  "description": "A minimal ClassicManager integration for Linux",
+  "version": "0.0.1",
+  "author": {
+    "name": "Jeremy Bae",
+    "email": "jswbae@gmail.com"
+  },
+  "license": "MIT",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opt9/classicmanager-desktop-linux.git"
+  },
+  "keywords": [
+    "classicmanager"
+  ],
+  "bugs": {
+    "url": "https://github.com/opt9/classicmanager-desktop-linux/issues"
+  },
+  "dependencies": {
+    "mpris-service": "^1.1.1"
+  }
+}
